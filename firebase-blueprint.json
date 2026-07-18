@@ -1,0 +1,52 @@
+{
+  "entities": {
+    "PortfolioSettings": {
+      "title": "PortfolioSettings",
+      "description": "Global website settings, popups, and embedded assets.",
+      "type": "object",
+      "properties": {
+        "siteName": { "type": "string", "maxLength": 100 },
+        "connectTextEN": { "type": "string", "maxLength": 100 },
+        "connectTextNP": { "type": "string", "maxLength": 100 },
+        "faviconUrl": { "type": "string", "format": "uri" },
+        "nepaliFlagUrl": { "type": "string", "format": "uri" },
+        "headerBgUrl": { "type": "string", "format": "uri" },
+        "temporaryMapEmbed": { "type": "string" },
+        "permanentMapEmbed": { "type": "string" },
+        "adminPasswordHash": { "type": "string", "maxLength": 100 },
+        "whatsappNumber": { "type": "string", "maxLength": 20 },
+        "contactEmail": { "type": "string", "format": "email" },
+        "customPopupActive": { "type": "boolean" },
+        "customPopupTitleEN": { "type": "string", "maxLength": 150 },
+        "customPopupTitleNP": { "type": "string", "maxLength": 150 },
+        "customPopupTextEN": { "type": "string", "maxLength": 1000 },
+        "customPopupTextNP": { "type": "string", "maxLength": 1000 },
+        "customPopupImageUrl": { "type": "string", "format": "uri" }
+      },
+      "required": ["siteName", "adminPasswordHash"]
+    },
+    "CMSDataModel": {
+      "title": "CMSDataModel",
+      "description": "The complete atomic document storing the CMS data.",
+      "type": "object",
+      "properties": {
+        "settings": { "type": "object" },
+        "sliders": { "type": "array" },
+        "socials": { "type": "array" },
+        "initiatives": { "type": "object" },
+        "blogs": { "type": "object" },
+        "educations": { "type": "array" },
+        "tools": { "type": "array" },
+        "interests": { "type": "array" },
+        "services": { "type": "array" },
+        "adminLog": { "type": "object" }
+      }
+    }
+  },
+  "firestore": {
+    "/cms/data": {
+      "schema": "CMSDataModel",
+      "description": "The primary unified document storing all portfolio segments, tools, and logs."
+    }
+  }
+}

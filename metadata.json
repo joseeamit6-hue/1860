@@ -1,0 +1,6 @@
+{
+  "name": "Amit Joshi Portfolio CMS",
+  "description": "Personal portfolio website for Amit Joshi with a dynamic dark/light mode neon network design, custom dual-language support (English/Nepali), interactive Gemini AI-powered search, integrated maps, and a secure password-protected CMS/Admin Panel.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
